@@ -16,6 +16,7 @@ services:
       - bkmrkd
 
   elasticsearch:
+    user: $USER
     image: bitnami/elasticsearch:7
     container_name: elasticsearch
     ports:
