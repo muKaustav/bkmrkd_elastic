@@ -48,9 +48,9 @@ let setBooksMapping = async () => {
 
     await esClient.indices.putMapping({ index: indexName, body: { properties: schema } })
 
-    console.log('Subtitle mapping created successfully')
+    console.log('Books mapping created successfully')
   } catch (error) {
-    console.log('An error occurred while setting the subtitle mapping:')
+    console.log('An error occurred while setting the Books mapping:')
     console.error(error)
   }
 }
