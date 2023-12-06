@@ -23,7 +23,7 @@ services:
       - ELASTICSEARCH_ADVERTISED_PORT_NUMBER=9200
       - ELASTICSEARCH_ALLOW_REMOTE_CONNECTIONS=yes
     volumes:
-      - ./elasticsearch:/bitnami/elasticsearch/data
+      - .:/bitnami/elasticsearch/data
     networks:
       - bkmrkd
 
