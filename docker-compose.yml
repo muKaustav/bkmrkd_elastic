@@ -1,17 +1,13 @@
 version: '3'
 services:
   elastic-server:
-    build:
-      context: elasticsearch
-      dockerfile: Dockerfile
+    build: .
     restart: always
     ports:
       - '5001:5001'
     volumes:
-      - ./elasticsearch:/app
-      - ./elasticsearch:/bitnami/elasticsearch/data
-    links:
-      - elasticsearch
+      - .:/app
+      - .:/bitnami/elasticsearch/data
     depends_on:
       - elasticsearch
     networks:
