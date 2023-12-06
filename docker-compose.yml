@@ -6,8 +6,8 @@ services:
     ports:
       - '5001:5001'
     volumes:
-      - .:/app
-      - .:/bitnami/elasticsearch/data
+      - ./elasticsearch:/app
+      - ./elasticsearch:/bitnami/elasticsearch/data
     depends_on:
       - elasticsearch
     networks:
@@ -23,7 +23,7 @@ services:
       - ELASTICSEARCH_ADVERTISED_PORT_NUMBER=9200
       - ELASTICSEARCH_ALLOW_REMOTE_CONNECTIONS=yes
     volumes:
-      - .:/bitnami/elasticsearch/data
+      - ./elasticsearch:/bitnami/elasticsearch/data
     networks:
       - bkmrkd
 
